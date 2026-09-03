@@ -2,7 +2,7 @@
 
 [![Status](https://img.shields.io/badge/Status-Translational%20Proposal-blue.svg)](#)
 [![Version](https://img.shields.io/badge/Version-2.0-green.svg)](#)
-[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Document](https://img.shields.io/badge/Format-LaTeX%20%2F%20BibTeX-orange.svg)](#compiling-the-manuscript)S
 
 ---
