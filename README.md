@@ -3,7 +3,7 @@
 [![Status](https://img.shields.io/badge/Status-Translational%20Proposal-blue.svg)](#)
 [![Version](https://img.shields.io/badge/Version-2.0-green.svg)](#)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![Document](https://img.shields.io/badge/Format-LaTeX%20%2F%20BibTeX-orange.svg)](#compiling-the-manuscript)S
+[![Document](https://img.shields.io/badge/Format-LaTeX%20%2F%20BibTeX-orange.svg)](#compiling-the-manuscript)
 
 ---
 
@@ -76,7 +76,7 @@ The RVNA Protocol integrates four clinically and biophysically validated pillars
 
 ```
 .
-├── LICENSE             # MIT License
+├── LICENSE             # GNU General Public License v3 LICENSE (GPLv3) 
 ├── README.md           # Comprehensive repository documentation with hyperlinked evidence
 ├── Rvna_protocol.tex   # Full academic manuscript in LaTeX format
 └── citations.bib       # Complete BibTeX bibliography with verified DOIs and URLs
