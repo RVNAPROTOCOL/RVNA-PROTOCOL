@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Next%20Major%20Release-v3.0%20(Coming%20Soon)-f59e0b.svg?style=for-the-badge" alt="v3.0 Coming Soon" />
   <img src="https://img.shields.io/badge/CFD%20Engine-Poroelastic%20CED-8b5cf6.svg?style=for-the-badge" alt="CFD Engine" />
   <img src="https://img.shields.io/badge/Target-Lyssavirus%20Phylogroups%20I%20%26%20II-ef4444.svg?style=for-the-badge" alt="Target" />
-  <img src="https://img.shields.io/badge/License-MIT-6366f1.svg?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/License-GNU%20GPL%20v3-6366f1.svg?style=for-the-badge" alt="License" />
 </p>
 
 ---
@@ -157,7 +157,7 @@ $$\nabla \cdot \boldsymbol{\sigma}' - \alpha \nabla p = \mathbf{0}, \quad \bolds
 
 ```
 .
-├── LICENSE                                # MIT License
+├── LICENSE                                # GNU General Public License v3 (GPLv3)
 ├── README.md                              # Comprehensive repository documentation with hyperlinked evidence
 ├── RVNA_Drug_and_Cytokine_Compendium.txt  # High-density pharmacological, small-molecule & cytokine directory
 ├── Rvna_protocol.tex                      # Full academic manuscript in LaTeX format (Version 2.1)
