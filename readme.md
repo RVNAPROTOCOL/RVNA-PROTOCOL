@@ -160,8 +160,10 @@ $$\nabla \cdot \boldsymbol{\sigma}' - \alpha \nabla p = \mathbf{0}, \quad \bolds
 ├── LICENSE                                # GNU General Public License v3 (GPLv3)
 ├── README.md                              # Comprehensive repository documentation with hyperlinked evidence
 ├── RVNA_Drug_and_Cytokine_Compendium.txt  # High-density pharmacological, small-molecule & cytokine directory
-├── RVNA_protocol.tex                      # Full academic manuscript in LaTeX format (Version 2.1)
-└── RVNA_references_verified.bib                          # Curated BibTeX bibliography for the manuscript
+├── rvna_protocol.tex                      # Full academic manuscript in LaTeX format (Version 2.1)
+├── citations.bib                          # Curated BibTeX bibliography for the manuscript
+├── RVNA(6).pdf                            # Pre-compiled pdf file for version 2.0
+└── The_RVNA_Protocol_A...pdf              # Pre-compiled pdf file                      
 ```
 
 ---
@@ -172,19 +174,19 @@ The manuscript is written in standard LaTeX using `xcolor`, `tcolorbox`, `natbib
 
 ### Option A: Using `latexmk` (Recommended)
 ```bash
-latexmk -pdf RVNA_protocol.tex
+latexmk -pdf  rvna_protocol.tex    
 ```
 
 ### Option B: Using `pdflatex` and `bibtex`
 ```bash
-pdflatex RVNA_protocol.tex
-bibtex Rvna_protocol
-pdflatex RVNA_protocol.tex
-pdflatex RVNA_protocol.tex
+pdflatex  rvna_protocol.tex    
+bibtex    rvna_protocol
+pdflatex  rvna_protocol.tex    
+pdflatex  rvna_protocol.tex    
 ```
 
 ### Option C: Web-based LaTeX Editors (Overleaf)
-Upload `RVNA_protocol.tex` and `RVNA_references_verified.bib` to [Overleaf](https://www.overleaf.com/). Select **pdfLaTeX** as the compiler in project settings.
+Upload `rvna_protocol.tex` and `citations.bib` to [Overleaf](https://www.overleaf.com/). Select **pdfLaTeX** as the compiler in project settings.
 
 ---
 
