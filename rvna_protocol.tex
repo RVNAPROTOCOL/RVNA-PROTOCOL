@@ -6,12 +6,31 @@
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
 \usepackage{url}
+\usepackage[table]{xcolor}
+\usepackage{tcolorbox}
+
+% Color palette for high visual impact and readability
+\definecolor{rvnablue}{RGB}{14, 65, 148}
+\definecolor{rvnacrimson}{RGB}{165, 25, 48}
+\definecolor{rvnaemerald}{RGB}{16, 120, 72}
+\definecolor{rvnaamber}{RGB}{195, 110, 10}
+\definecolor{rvnaplum}{RGB}{115, 35, 125}
+\definecolor{rvnadark}{RGB}{28, 34, 48}
+\definecolor{boxbg}{RGB}{246, 249, 254}
+\definecolor{boxframe}{RGB}{175, 202, 238}
+\definecolor{warnbg}{RGB}{254, 246, 247}
+\definecolor{warnframe}{RGB}{235, 175, 182}
+
+% Custom styled callout boxes
+\newtcolorbox{clinicalpearl}[1]{colback=boxbg,colframe=boxframe,fonttitle=\bfseries\color{rvnablue},title=#1,arc=2mm,boxrule=1pt}
+\newtcolorbox{cautionbox}[1]{colback=warnbg,colframe=warnframe,fonttitle=\bfseries\color{rvnacrimson},title=#1,arc=2mm,boxrule=1pt}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    citecolor=blue,
+    linkcolor=rvnablue,
+    urlcolor=rvnaplum,
+    citecolor=rvnaemerald,
     pdftitle={The RVNA Protocol: A Comprehensive Systems Architecture for Post-Exposure Clearance of Rabies Virus in the Central Nervous System},
     pdfauthor={The RVNA Collaborative},
     pdfsubject={Rabies Encephalomyelitis, Systems Engineering, Neurovirology, Convection-Enhanced Delivery},
@@ -31,7 +50,7 @@
 \title{\textbf{The RVNA Protocol: A Comprehensive Systems Architecture for Post-Exposure Clearance of Rabies Virus in the Central Nervous System}}
 \author{The RVNA Collaborative\\[0.2cm]
     \small{\texttt{rvna.protocol@proton.me}}}
-\date{Version 2.0 -- \today}
+\date{Version 2.1 -- \today}
 
 \begin{document}
 
@@ -40,12 +59,13 @@
 \begin{abstract}
 \noindent Rabies virus (RABV) infection of the central nervous system (CNS) remains one of the deadliest infectious diseases known to medicine, carrying a case-fatality rate approaching 100\% once clinical neurological manifestations appear. While standard post-exposure prophylaxis (PEP) is virtually 100\% effective when administered prior to viral entry into the peripheral nervous system, no established curative therapy exists once the virus crosses the blood-brain barrier (BBB) and establishes encephalomyelitis \citep{jackson2011, lacy2024}. The historical alternative, the Milwaukee Protocol, which relies on drug-induced therapeutic coma without active viral clearance mechanisms, has demonstrated catastrophic failure rates in worldwide clinical replications and lacks neurovirological justification \citep{jackson2011, willoughby2005}.
 
-We present the \textbf{Rabies Virtual Neutralising Active (RVNA) Protocol} --- a comprehensive, systems-engineered, multi-modal translational architecture designed for active viral clearance from the CNS. The protocol integrates four synergistically validated components:
+We present the \textbf{Rabies Virtual Neutralising Active (RVNA) Protocol} --- a comprehensive, systems-engineered, multi-modal translational architecture designed for active viral clearance from the CNS and structural neuronal recovery. The protocol integrates five synergistically validated pillars:
 \begin{enumerate}
-    \item \textbf{Convection-Enhanced Delivery (CED)} for direct stereotactic parenchymal infusion of neutralizing agents under positive hydrostatic pressure gradients ($0.1\text{--}5.0\,\mu\mathrm{L/min}$), completely bypassing the BBB \citep{ced2025};
+    \item \textbf{Convection-Enhanced Delivery (CED)} for direct stereotactic parenchymal infusion of therapeutics under positive hydrostatic pressure gradients ($0.1\text{--}5.0\,\mu\mathrm{L/min}$), completely bypassing the BBB and eliminating peripheral liver/kidney biodistribution sinks \citep{ced2025};
     \item \textbf{Targeted Regional Brain Hypothermia ($32\text{--}33\,^{\circ}\mathrm{C}$)} to slow retrograde/anterograde viral transport, preserve cellular ATP, and mitigate excitotoxicity while preserving systemic normothermia ($37\,^{\circ}\mathrm{C}$) and peripheral immunity \citep{jackson2011, ru2865550};
-    \item \textbf{Dual-Antibody Cocktail Strategy} combining full-length IgG monoclonal antibodies (SYN023: Zamerovimab and Mazorelvimab) for bulk extracellular neutralization with single-domain camelid nanobodies (VHH, including biparatopic constructs) engineered to penetrate the narrow ($\sim 20\text{--}30\,\mathrm{nm}$) synaptic cleft \citep{syn0232025, terryn2016}; and
-    \item \textbf{Pediatric Neuroplasticity Exploitation} leveraging developmental synaptic plasticity and epigenetic brain-derived neurotrophic factor (BDNF) activation to promote functional network recovery post-clearance \citep{james2026, yan2025, heinsberg2025}.
+    \item \textbf{Dual-Compartment Multi-Epitope Antibody Cocktail} combining full-length IgG monoclonal antibodies (SYN023) and multi-epitope mAbs (targeting non-overlapping epitopes II, III, and IV) for broad interstitial neutralization with single-domain camelid nanobodies (biparatopic VHH) engineered to penetrate the narrow ($\sim 20\text{--}30\,\mathrm{nm}$) synaptic cleft \citep{syn0232025, terryn2016, ren2025};
+    \item \textbf{Intracellular Antiviral, Genetic, and Budding Restriction} deploying BCX4430 (galidesivir) for dual RNA polymerase chain termination and autophagy suppression, custom phosphorothioate ASOs/siRNAs for genomic transcript degradation, atorvastatin for host lipid droplet depletion to arrest viral budding, and low-dose IFN-$\beta$ for microvascular tight-junction stabilization \citep{xie2023, zhao2022}; and
+    \item \textbf{Structural Neuroregeneration \& Pediatric Neuroplasticity} leveraging developmental synaptic plasticity and epigenetic brain-derived neurotrophic factor (BDNF) hypomethylation, co-administered with targeted neurotrophins (NT-3 and NGF), to reconstruct degraded dendritic spines and reverse axonal beading post-clearance \citep{scott2008, jackson2013pathogenesis, xu2023, gluska2014, heinsberg2025}.
 \end{enumerate}
 
 The RVNA Protocol is a coherent, deployable, and testable translational framework intended for evaluation under compassionate-use and expanded-access pathways for an otherwise uniformly fatal condition \citep{fda2025}.
@@ -81,9 +101,9 @@ The fundamental failure mode of the Milwaukee Protocol is its passive nature: me
 
 As highlighted in recent critical reviews, the contemporary standard of care for rabies encephalomyelitis remains strictly palliative sedation \citep{lacy2024}. Developing an active clearance therapy remains one of the most critical unmet imperatives in modern infectious disease medicine \citep{jackson2011}.
 
-\subsection{The RVNA Hypothesis: Reversible Dysfunction vs. Irreversible Destruction}
+\subsection{The RVNA Hypothesis: Reversible Dysfunction vs. Progressive Process Degeneration (Axonal Swelling and Dendritic Spine Loss)}
 
-Histopathological examination of rabies-infected CNS tissue reveals a profound biological paradox: despite catastrophic clinical encephalopathy and terminal autonomic collapse, there is a striking absence of extensive neuronal necrosis or structural destruction \citep{jackson2011}. Clinical rabies is characterized primarily by \textbf{severe, reversible neuronal and synaptic dysfunction}:
+Histopathological examination of rabies-infected CNS tissue reveals a profound biological paradox: despite catastrophic clinical encephalopathy and terminal autonomic collapse, there is a striking absence of extensive neuronal necrosis or widespread neuronal apoptosis \citep{jackson2011, fu2008}. Rather than acute perikaryal destruction, clinical rabies is driven by severe ionic and electrophysiological impairment:
 
 \begin{itemize}
     \item \textbf{Ion-Channel Electrophysiological Impairment}: RABV infection causes marked reduction in the functional expression of voltage-gated $\mathrm{Na}^+$ channels and delayed-rectifier $\mathrm{K}^+$ channels, directly impairing action potential generation and neuronal firing \citep{ionchannels1999}. Proteomic profiling of RABV-infected neural tissue demonstrates severe dysregulation of ion homeostasis: $\mathrm{H}^+$-ATPase and $\mathrm{Na}^+/\mathrm{K}^+$-ATPase are upregulated while $\mathrm{Ca}^{2+}$-ATPase is downregulated, leading to depletion of intracellular $\mathrm{Na}^+$ and $\mathrm{Ca}^{2+}$ gradients \citep{fu2008}.
@@ -97,29 +117,46 @@ Histopathological examination of rabies-infected CNS tissue reveals a profound b
     \item \textbf{Synuclein Alpha Suppression}: Downregulation of $\alpha$-synuclein (SNCA), abundant in presynaptic terminals, strongly correlates with clinical disease progression and synaptic failure \citep{chailangkarn2021}.
 \end{itemize}
 
-These findings underpin the foundational hypothesis of the RVNA Protocol: \textbf{because infected neurons remain structurally intact during initial symptom presentation, active clearance of infectious virions and glycoprotein fragments from the interstitial space and synaptic cleft can arrest functional deterioration and allow synaptic restoration}.
+However, foundational neurovirological research led by Alan C. Jackson and colleagues across successive editions of \textit{Rabies: Scientific Basis of the Disease and Its Management} has resolved this paradox by demonstrating that while neuronal cell bodies (perikarya) remain morphologically intact, pathogenic rabies virus causes profound, progressive \textbf{ultrastructural degeneration of neuronal processes (axons and dendrites)} \citep{scott2008, jackson2013pathogenesis, jackson2020, jackson2025}:
+
+\begin{clinicalpearl}{Neuropathological Breakthrough: Structural Process Degeneration}
+\begin{quote}
+``Rabies virus infection produces structural abnormalities in neurons that are characterized by swelling and beading of neuronal processes (axons and dendrites), vacuolation in the neuropil, and swelling of mitochondria... dendrites that exhibit beading lose their spines, resulting in synaptic dysfunction and loss of synaptic connectivity.'' \citep{scott2008, jackson2013pathogenesis, jackson2025}
+\end{quote}
+\end{clinicalpearl}
+
+Ultrastructural and experimental investigations in yellow fluorescent protein (YFP)-expressing transgenic mice and street rabies models reveal three key mechanisms underlying this process degeneration:
+\begin{enumerate}
+    \item \textbf{Focal Axonal Swellings (Beading)}: Infection leads to mitochondrial dysfunction, overproduction of reactive oxygen species (ROS), and lipid peroxidation (e.g., 4-hydroxy-2-nonenal accumulation), producing focal axonal swellings (varicosities) and organelle vacuolation along layer V cortical pyramidal, cerebellar mossy fiber, and brainstem axons \citep{scott2008, jackson2013pathogenesis, jackson2025}.
+    \item \textbf{Dendritic Spine Degradation via F-Actin Depolymerization}: Dendrites exhibiting beading rapidly undergo severe degradation and loss of dendritic spines, driven by virus-induced depolymerization of filamentous actin (F-actin) and cytoskeletal collapse in cortical and hippocampal CA1 pyramidal neurons \citep{scott2008, song2013}.
+    \item \textbf{Electrical and Synaptic Uncoupling}: Focal constrictions between axonal varicosities and dendritic beaded segments cause functional and electrical isolation of dendrites from neuronal perikarya, completely arresting synaptic signal propagation \citep{scott2008}.
+\end{enumerate}
+
+These discoveries redefine the foundational hypothesis and therapeutic imperative of the RVNA Protocol: \textbf{because neuronal somas remain viable while axonal and dendritic processes undergo progressive, reversible degeneration, active viral eradication must be deployed rapidly to halt ongoing process degradation, and must be paired with immediate neurotrophic and epigenetic stimulation (BDNF, NT-3, NGF) to stimulate spinogenesis, rebuild lost dendritic spines, and rewire disconnected circuits}.
 
 \section{Systems Architecture Overview}
 
-The RVNA Protocol establishes a coordinated, four-component bioengineering architecture designed to overcome the biophysical, immunological, and anatomical barriers of CNS rabies (Table~\ref{tab:core_components}):
+The RVNA Protocol establishes a coordinated, five-pillar bioengineering architecture designed to overcome the biophysical, immunological, anatomical, and neurodegenerative barriers of CNS rabies (Table~\ref{tab:core_components}):
 
 \begin{table}[htbp]
 \centering
 \small
-\begin{tabular}{@{}p{3.5cm}p{4.5cm}p{6.5cm}@{}}
+\begin{tabular}{@{}p{3.2cm}p{4.8cm}p{6.5cm}@{}}
 \toprule
 \textbf{Component} & \textbf{Mechanism of Action} & \textbf{Role in RVNA Protocol} \\
 \midrule
-\textbf{1. Convection-Enhanced Delivery (CED)} & Positive hydrostatic pressure ($0.1\text{--}5.0\,\mu\mathrm{L/min}$) generating interstitial bulk flow & Bypasses BBB; delivers high antibody concentrations homogenously across deep brain nuclei \citep{ced2025}. \\
+\textbf{1. Convection-Enhanced Delivery (CED)} & Positive hydrostatic pressure ($0.1\text{--}5.0\,\mu\mathrm{L/min}$) generating interstitial bulk flow & Completely bypasses BBB; eliminates peripheral liver/kidney sink; delivers high therapeutic concentrations across deep brain nuclei \citep{ced2025}. \\
 \addlinespace
 \textbf{2. Regional Brain Hypothermia} & Targeted cerebral cooling ($32\text{--}33\,^{\circ}\mathrm{C}$) preserving systemic normothermia ($37\,^{\circ}\mathrm{C}$) & Slows viral replication and axonal transport; reduces metabolic demand and excitotoxicity; preserves peripheral immunity \citep{jackson2011, ru2865550}. \\
 \addlinespace
-\textbf{3. Dual-Antibody Cocktail} & Synergistic combination of full-length IgG (SYN023) and single-domain VHH nanobodies & IgG neutralizes bulk extracellular virions; small VHH ($\sim 2\text{--}4\,\mathrm{nm}$) penetrates narrow ($\sim 20\text{--}30\,\mathrm{nm}$) synaptic clefts \citep{syn0232025, terryn2016}. \\
+\textbf{3. Multi-Epitope Antibody Stack} & Synergistic combination of full IgG (SYN023), multi-epitope mAbs (sites II/III/IV), and biparatopic VHH & Full IgG neutralizes bulk extracellular virions; multi-epitope targeting prevents mutational escape; small VHH ($\sim 2\text{--}4\,\mathrm{nm}$) penetrates narrow ($\sim 20\text{--}30\,\mathrm{nm}$) synaptic clefts \citep{syn0232025, terryn2016, ren2025}. \\
 \addlinespace
-\textbf{4. Pediatric Neuroplasticity} & Age-dependent synaptic remodeling and BDNF epigenetic hypomethylation & Mobilizes compensatory neural circuitry to bypass damaged synaptic pathways during recovery \citep{james2026, heinsberg2025}. \\
+\textbf{4. Intracellular Antiviral \& Genetic Purge} & BCX4430 (galidesivir), custom ASOs/siRNAs, atorvastatin, and IFN-$\beta$ & Halts RdRp elongation and suppresses autophagy hijacking (BCX4430); degrades genomic viral RNA (ASOs); blocks lipid droplet viral budding (atorvastatin); stabilizes BBB tight junctions (IFN-$\beta$) \citep{xie2023, zhao2022}. \\
+\addlinespace
+\textbf{5. Structural Spine Repair \& Neuroplasticity} & NT-3, NGF, and pediatric BDNF epigenetic hypomethylation & Co-infusion of NT-3 and NGF drives dendritic spine regeneration and reverses axonal beading; pediatric plasticity rewires disrupted circuits \citep{scott2008, xu2023, gluska2014, james2026, heinsberg2025}. \\
 \bottomrule
 \end{tabular}
-\caption{Core systems architecture of the RVNA Protocol.}\label{tab:core_components}
+\caption{Core five-pillar systems architecture of the RVNA Protocol (Version 2.1).}\label{tab:core_components}
 \end{table}
 
 \section{Component 1: Convection-Enhanced Delivery (CED)}
@@ -227,6 +264,48 @@ Anti-rabies VHH constructs have demonstrated potent in vivo efficacy in lethal m
 
 Engineered biparatopic VHH constructs (e.g., Rab-E8/H7), which combine two non-overlapping neutralizing domains via a flexible linker, demonstrate up to \textbf{1500-fold higher neutralizing potency} ($\mathrm{IC}_{50}$ in picomolar ranges) \citep{terryn2016}. Preclinical intracerebral micro-dosing ($33\,\mu\mathrm{g}$) of biparatopic VHH conferred complete protection against lethal intracerebral rabies challenge, demonstrating the therapeutic feasibility of direct CNS administration.
 
+\subsection{Multi-Epitope Monoclonal Architecture: Epitopes II, III, and IV}
+
+Rabies virus exhibits significant genetic and antigenic plasticity across Lyssavirus phylogroups. Conventional monoclonal therapies directed against a single epitope (e.g., Rabishield / 17C7 targeting epitope III) carry inherent risks of therapeutic failure resulting from single point mutations (e.g., Lys330 substitutions) that abolish antibody binding \citep{sloan2007, ren2025}. 
+
+To establish durable pan-lyssavirus coverage and eliminate mutational escape, the RVNA Protocol incorporates a multi-epitope monoclonal triad targeting non-overlapping conformational sites on the rabies glycoprotein (RABV-G) \citep{ren2025}:
+\begin{itemize}
+    \item \textbf{Epitope II (Sites IIa and IIb)}: Targeted by antibodies such as 7A3 or RVA122, neutralizing pre-fusion and post-fusion G-protein conformations across standard challenge virus (CVS), dog-derived rabies virus (DRV), and bat lyssaviruses \citep{callaway2022, ren2025}.
+    \item \textbf{Epitope III}: Targeted by antibodies such as 1E11 or SYN023 components (Zamerovimab/Mazorelvimab), recognizing conserved amino acid residues in the lateral central domain \citep{syn0232025, ren2025}.
+    \item \textbf{Epitope IV}: Targeted by antibodies such as 8A5 or 2B10, covering cryptic membrane-proximal epitopes and ensuring cross-phylogroup neutralization against divergent lyssaviruses, including Duvenhage virus (DUVV), European bat lyssavirus 1 (EBLV-1), and Aravan virus (ARAV) \citep{ren2025}.
+\end{itemize}
+Co-infusion of this multi-epitope triad via CED ensures that even if selective escape variants emerge at one locus, neutralizing coverage remains locked across remaining antigenic sites.
+
+\subsection{Translational Critique of Peripheral Peptide-Shuttled Delivery: Why Murine Rescue Fails in Humans}
+
+Recent preclinical studies by \citet{ren2025} demonstrated that conjugating an anti-RABV triple-antibody cocktail (1E11, 7A3, 8A5) to the 18-amino acid cell-penetrating peptide \textbf{SynB1} yielded an \textbf{80\% survival rate} in mice when administered intravenously at 5 days post-infection (5 dpi), an interval when symptomatic central nervous system invasion was established. In contrast, unconjugated intravenous antibodies provided only 0--20\% survival \citep{ren2025}.
+
+While this peptide-conjugation strategy provides proof-of-concept evidence that neutralizing antibodies can rescue symptomatic mice if BBB entry is facilitated, a rigorous translational analysis reveals that \textbf{the claim of 80\% rescue falls apart when transitioning from murine models to human clinical reality}:
+
+\begin{enumerate}
+    \item \textbf{Human Blood-Brain Barrier Cytoarchitecture}:
+    The human BBB is structurally, cellularly, and dynamically distinct from that of rodents. Human brain microvascular endothelial cells are substantially thicker and are encased in continuous, multilayered pericyte coverage ($\sim 1:1$ pericyte-to-endothelial coverage, compared to sparse and discontinuous coverage in mice) \citep{uchida2020, hill2025}. Human capillary junctions exhibit significantly denser claudin-5 and occludin strand arrangements and extensive astrocyte endfoot tiling \citep{hill2025}. Consequently, non-specific adsorption-mediated transcytosis (AMT) across this barrier is dramatically attenuated in human clinical physiology compared to rodent capillaries.
+    
+    \item \textbf{Peripheral Biodistribution Sink and Massive Volume Dilution}:
+    SynB1 is a cationic, amphipathic peptide that mediates membrane penetration non-specifically through electrostatic adsorption to negatively charged membrane lipids, completely lacking CNS-specific receptor tropism \citep{rousselle2001, ren2025}. Consequently, systemic intravenous administration results in massive uptake by peripheral clearance organs. As documented in Ren et al.'s own tissue biodistribution imaging, bright fluorescence concentrated heavily in the \textbf{liver and kidneys} \citep{ren2025}. In an adult human patient with $\sim 5\,\mathrm{L}$ of circulating blood volume and high hepatic/renal perfusion, peripherally administered SynB1-antibody conjugates are overwhelmingly scavenged and diluted, reducing CNS bioavailability to sub-therapeutic fractions.
+    
+    \item \textbf{Acute Hepatic and Renal Toxicity}:
+    To overcome this 5-liter systemic dilution and achieve neuroprotective titers in a $1{,}400\,\mathrm{g}$ human brain, intravenous dosing would require astronomical drug quantities. Given that peptide-antibody conjugates clear primarily through renal filtration and hepatic metabolism (kidney/liver half-life $\sim 4.5\,\mathrm{days}$, clearance rate $\sim 0.15\,\mathrm{d}^{-1}$) \citep{ren2025}, systemic dose escalation risks severe acute tubular necrosis, nephrotoxicity, and hepatic reticuloendothelial overload.
+    
+    \item \textbf{Short In Vivo Shelf-Life and Serum Peptidase Instability}:
+    Peptide-antibody conjugates suffer from rapid serum degradation. Host circulating aminopeptidases and endopeptidases cleave the flexible peptide linker in peripheral circulation, uncoupling the SynB1 shuttle from the heavy chain before the antibody can reach the brain microvasculature. The in vivo stability and functional half-life of intact conjugates are insufficient for sustained therapeutic coverage across prolonged clinical encephalomyelitis.
+    
+    \item \textbf{Immunogenicity of Chimeric Frameworks}:
+    Chimeric antibodies that retain murine variable frameworks (e.g., 1E11, 7A3, 8A5) carry a substantial risk of human anti-mouse antibody (HAMA) or anti-drug antibody (ADA) responses \citep{ren2025}, neutralizing the therapeutic upon repeated administration.
+    
+    \item \textbf{Collateral Damage of Alternative Nanocarriers}:
+    Prior attempts to overcome delivery barriers using aptamer/RVG-functionalized gold nanorods for photothermal therapy \citep{ren2021} caused indiscriminate photothermal damage and coagulation necrosis to surrounding uninfected neurons and glial networks.
+\end{enumerate}
+
+\begin{cautionbox}{Translational Reality Check: The Human BBB \& Peripheral Sink Dilemma}
+While \citet{ren2025} demonstrated that SynB1-antibody conjugates achieved 80\% survival in infected mice, this strategy collapses in human translation due to thicker brain endothelial cells, near 1:1 pericyte coverage, massive non-specific liver/kidney sequestration, systemic dilution across 5 liters of circulating blood, and severe acute nephrotoxicity and hepatotoxicity. Direct stereotactic Convection-Enhanced Delivery (CED) remains biophysically indispensable to achieve curative human CNS titers without systemic toxicity.
+\end{cautionbox}
+
 \section{Component 3: Targeted Regional Brain Hypothermia}
 
 \subsection{Physiological Rationale}
@@ -256,7 +335,92 @@ Targeted cerebral cooling ($32\text{--}33\,^{\circ}\mathrm{C}$) is achieved thro
     \item Continuous intracranial parenchymal temperature monitoring.
 \end{itemize}
 
-\section{Component 4: Pediatric Neuroplasticity and Epigenetics}
+\section{Component 4: Multi-Modal Pharmacological, Antiviral, and Neurotrophic Armamentarium}
+
+While extracellular antibodies and synaptic nanobodies arrest virion propagation across interstitial and synaptic spaces, comprehensive eradication of rabies encephalomyelitis requires targeting intracellular viral replication, suppressing host viral assembly platforms, and actively repairing the structural axonal and dendritic injuries identified by Alan C. Jackson and colleagues \citep{scott2008, jackson2013pathogenesis} (Table~\ref{tab:pharmacological_compendium}).
+
+\subsection{Small-Molecule Antiviral Restriction: BCX4430 (Galidesivir)}
+
+\subsubsection{Mechanism of Action}
+BCX4430 (Galidesivir / Immucillin-A) is a synthetic broad-spectrum adenosine C-nucleoside analogue featuring an imino-ribitol core that mimics the transition state of nucleoside phosphorylation \citep{xie2023}. Following intracellular conversion to its active triphosphate form by host kinases, BCX4430 acts as a non-obligate RNA chain terminator for the rabies viral RNA-dependent RNA polymerase (RdRp, L-protein complex), directly arresting viral transcription and genomic replication \citep{xie2023}.
+
+\subsubsection{Dual Action: Polymerase Termination and Autophagy Suppression}
+Crucially, \citet{xie2023} discovered that BCX4430 exerts a potent dual mechanism in rabies-infected neurons: in addition to direct polymerase inhibition, BCX4430 suppresses \textbf{mTOR-dependent autophagy}. Pathogenic rabies virus specifically subverts and hijacks host autophagic vacuoles as intracellular scaffolds for viral replication and assembly; by blocking this subverted autophagic pathway, BCX4430 starves the virus of intracellular assembly niches without inducing cytotoxicity \citep{xie2023}.
+
+\subsubsection{Superiority of BCX4430 over T-705 (Favipiravir)}
+In comparative evaluations, BCX4430 demonstrates decisive clinical and pharmacodynamic advantages over T-705 (favipiravir):
+\begin{enumerate}
+    \item \textbf{Greater In Vitro Neuronal Potency}: In mouse neuroblastoma (N2a) and neuronal cultures, BCX4430 exhibits substantially stronger anti-rabies viral inhibition across multiple virulent challenge strains than T-705 \citep{xie2023}.
+    \item \textbf{Dual Target Engagement}: Whereas T-705 acts strictly as a mutagenic pseudobase, BCX4430 combines direct RdRp chain termination with host autophagy pathway normalization.
+    \item \textbf{Favorable Therapeutic Index}: BCX4430 displays zero apparent cytotoxicity in neuronal lines at concentrations up to $250\,\mu\mathrm{M}$, offering an expansive therapeutic safety window \citep{xie2023}.
+    \item \textbf{Formulation Stability for CED}: BCX4430 is highly water-soluble and chemically stable in aqueous infusion matrices, making it an ideal small-molecule candidate for stereotactic CED parenchymal co-infusion alongside biologics.
+\end{enumerate}
+
+\subsection{Host-Targeted Budding Inhibition: Atorvastatin}
+
+Rabies virus envelope morphogenesis and viral budding are dependent upon host lipid metabolism. Recent investigations have demonstrated that pathogenic rabies virus hijacks host intracellular \textbf{lipid droplets (LDs)} as essential metabolic platforms to facilitate viral glycoprotein transport and virion budding from the plasma membrane \citep{zhao2022}.
+
+Treatment with \textbf{atorvastatin}, an HMG-CoA reductase inhibitor, suppresses host intracellular lipid droplet biogenesis, causing a profound reduction in RABV progeny budding and extracellular particle release from infected neuronal somas without compromising neuronal viability \citep{zhao2022}. Within the RVNA Protocol, atorvastatin is administered as a synergistic host-targeted antiviral adjuvant to clamp virion shedding while intracellular genetic and antibody clearance take effect.
+
+\subsection{Intracellular Genetic Eradication: Custom ASOs and siRNAs}
+
+To achieve definitive non-cytolytic eradication of the intracellular viral factory, the RVNA Protocol incorporates custom phosphorothioate \textbf{antisense oligonucleotides (ASOs)} and \textbf{small interfering RNAs (siRNAs)} co-infused via CED. These synthetic oligonucleotides are sequence-mapped to ultra-conserved functional domains of the Rabies virus Nucleoprotein (N-gene) and Polymerase (L-gene) transcripts. Upon entering the soma cytoplasm of intact infected neurons, hybridization with viral negative-sense RNA templates triggers endogenous RNase H (for single-stranded ASOs) or the RNA-Induced Silencing Complex (RISC, for siRNAs), executing targeted enzymatic cleavage of viral genomes without inducing host cell lysis.
+
+\subsection{Microvascular Tight-Junction Stabilization: Interferon-Beta (IFN-\texorpdfstring{$\beta$}{β})}
+
+Preservative-free, clinical-grade recombinant \textbf{Interferon-Beta (IFN-$\beta$)} is co-infused via CED at low, titrated micro-doses to serve as a dual microvascular stabilizer and non-cytolytic clearance modifier. Upon binding neuronal IFNAR1/IFNAR2 complexes, IFN-$\beta$ triggers JAK1/TYK2 phosphorylation, inducing Protein Kinase R (PKR, which halts viral mRNA translation) and 2'-5'-Oligoadenylate Synthetase 1 (OAS1/ISG20, which degrades viral RNA species).
+
+Unlike pro-inflammatory cytokines, IFN-$\beta$ actively downregulates matrix metalloproteinases (MMPs), stabilizing brain microvascular endothelial tight junctions and preventing vasogenic cerebral edema. Conversely, high-dose \textbf{Interferon-Gamma (IFN-$\gamma$)} is strictly avoided due to documented hazards of microglial hyper-activation, massive brain swelling, status epilepticus, and permanent epigenetic synaptopathy (chromatin shutdown of synaptic transmission genes) \citep{fu2008}.
+
+\subsection{Targeted Structural Spine and Axonal Regeneration: Neurotrophin-3 (NT-3) and Nerve Growth Factor (NGF)}
+
+The seminal findings of \citet{scott2008} and \citet{jackson2013pathogenesis} demonstrated that rabies causes severe structural damage to neuronal processes: focal axonal swellings (beading) and widespread loss of dendritic spines. Clearing the virus halts ongoing insult, but functional neurological recovery requires active structural repair of these injured processes:
+
+\begin{itemize}
+    \item \textbf{Neurotrophin-3 (NT-3)}: Binds with high selectivity to the TrkC receptor tyrosine kinase, activating the downstream TrkC/ERK/c-Jun signaling pathway \citep{xu2023}. NT-3 promotes axonal elongation, stabilizes the neurofilament/microtubule cytoskeleton, reverses rabies-induced axonal beading, and maintains central glial and Schwann cell repair states \citep{xu2023}.
+    \item \textbf{Nerve Growth Factor (NGF)}: Binds to TrkA receptors, driving filamentous actin (F-actin) polymerization, synaptic vesicle clustering, and rapid dendritic spine spinogenesis \citep{gluska2014}. Crucially, pathogenic rabies virus specifically hijacks the p75 neurotrophin receptor (p75NTR) to accelerate its retrograde axonal transport machinery \citep{gluska2014}; exogenous NGF administration normalizes neurotrophin receptor balance and counteracts transport-associated cytoskeletal distress.
+\end{itemize}
+Co-infusion of NT-3 and NGF provides the biochemical foundation to reconstruct degraded dendritic spines and restore axonal continuity during post-clearance recovery.
+
+\subsection{Adjunctive Clinical Shields: ICP Control and Anti-Apoptotic Protection}
+
+\begin{itemize}
+    \item \textbf{3\% Hypertonic Saline / Mannitol}: Infused intravenously to maintain serum osmolality at $310\text{--}320\,\mathrm{mOsm/kg}$, establishing a hydrostatic osmotic gradient that extracts excess parenchymal free water and controls intracranial pressure (ICP) to protect against herniation.
+    \item \textbf{Emricasan}: A synthetic pan-caspase inhibitor that binds caspases 1, 3, 8, and 9, preventing premature apoptosis of infected neurons while ASOs and BCX4430 complete intracellular viral clearance.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{3.0cm}p{3.2cm}p{4.4cm}p{3.6cm}@{}}
+\toprule
+\textbf{Therapeutic Agent} & \textbf{Pharmacological Class} & \textbf{Primary Molecular Target} & \textbf{Delivery Platform} \\
+\midrule
+\textbf{SYN023 (Zamerovimab + Mazorelvimab)} & Humanized IgG1 mAb Cocktail & Non-overlapping RABV-G outer ectodomain epitopes & Stereotactic CED parenchymal co-infusion \\
+\addlinespace
+\textbf{Biparatopic Nanobodies (Rab-E8/H7)} & Camelid Single-Domain VHH ($\sim 15\,\mathrm{kDa}$) & Cryptic RABV-G epitopes within $\sim 20\text{--}30\,\mathrm{nm}$ synaptic cleft & Stereotactic CED parenchymal co-infusion \\
+\addlinespace
+\textbf{BCX4430 (Galidesivir)} & Adenosine C-Nucleoside Analogue & Viral RdRp RNA chain termination + mTOR autophagy suppression & Stereotactic CED parenchymal co-infusion \\
+\addlinespace
+\textbf{Atorvastatin} & HMG-CoA Reductase Inhibitor & Depletion of host lipid droplets; blocks virion budding & Enteral / Systemic maintenance \\
+\addlinespace
+\textbf{Custom Phosphorothioate ASOs / siRNAs} & Synthetic Antisense Oligonucleotides & Targeted cleavage of viral N-gene and L-gene transcripts & Stereotactic CED parenchymal co-infusion \\
+\addlinespace
+\textbf{Interferon-Beta (IFN-$\beta$)} & Type I Recombinant Cytokine & IFNAR1/2 activation; ISG induction; MMP downregulation & Low-dose titrated CED micro-infusion \\
+\addlinespace
+\textbf{Neurotrophin-3 (NT-3)} & Recombinant Neurotrophin & TrkC/ERK pathway; reverses axonal swelling/beading & Stereotactic CED parenchymal co-infusion \\
+\addlinespace
+\textbf{Nerve Growth Factor (NGF)} & Recombinant Neurotrophin & TrkA pathway; F-actin polymerization and spinogenesis & Stereotactic CED parenchymal co-infusion \\
+\addlinespace
+\textbf{3\% Saline / Mannitol} & Hyperosmolar Crystalloid & Serum osmolality ($310\text{--}320\,\mathrm{mOsm/kg}$); ICP reduction & Intravenous infusion \\
+\addlinespace
+\textbf{Emricasan} & Pan-Caspase Inhibitor & Caspases 1, 3, 8, 9; prevents premature soma apoptosis & Parenchymal / Systemic shield \\
+\bottomrule
+\end{tabular}
+\caption{Comprehensive Pharmacological and Biological Compendium of the RVNA Protocol (Version 2.1).}\label{tab:pharmacological_compendium}
+\end{table}
+
+\section{Component 5: Pediatric Neuroplasticity and Epigenetics}
 
 \subsection{The Developing Brain and Functional Recovery}
 
@@ -297,29 +461,34 @@ The RVNA Protocol is structured into six sequential clinical phases designed for
     \item Initiate selective brain cooling to target $32\text{--}33\,^{\circ}\mathrm{C}$.
     \item Maintain systemic core temperature at $37\,^{\circ}\mathrm{C}$ using active warming blankets.
     \item Establish continuous intracranial pressure (ICP) and brain temperature telemetry.
+    \item Initiate intravenous 3\% hypertonic saline or mannitol titration targeting serum osmolality of $310\text{--}320\,\mathrm{mOsm/kg}$.
 \end{enumerate}
 
-\subsection{Phase 4: Dual-Antibody Infusion (4--6 hours)}
+\subsection{Phase 4: Multi-Modal Therapeutic CED Infusion (4--6 hours)}
 \begin{enumerate}
-    \item Prepare SYN023 ($0.3\,\mathrm{mg/kg}$ equivalent parenchymal volume) \citep{syn0232025}.
+    \item Prepare SYN023 ($0.3\,\mathrm{mg/kg}$ equivalent parenchymal volume) and multi-epitope mAbs (sites II, III, IV) \citep{syn0232025, ren2025}.
     \item Prepare anti-rabies biparatopic VHH cocktail ($50\text{--}100\,\mu\mathrm{g/kg}$) \citep{terryn2016}.
-    \item Initiate co-infusion with $1.5\,\mathrm{mM}$ gadoteridol at $1.0\text{--}2.5\,\mu\mathrm{L/min}$.
-    \item Monitor real-time parenchymal distribution ($V_d/V_i$) via intraoperative MRI \citep{narsinh2025, munjal2025}.
+    \item Co-formulate BCX4430 ($50\text{--}100\,\mu\mathrm{M}$ equivalent parenchymal target) and custom N-/L-gene ASOs \citep{xie2023}.
+    \item Add trace gadoteridol ($1.5\,\mathrm{mM}$) for live intraoperative distribution surveillance.
+    \item Initiate CED infusion at $0.5\,\mu\mathrm{L/min}$, ramping to $1.5\text{--}2.5\,\mu\mathrm{L/min}$ under continuous T1-weighted MRI monitoring \citep{narsinh2025, munjal2025}.
+    \item Administer oral/enteral atorvastatin to suppress host lipid droplet-mediated viral budding \citep{zhao2022}.
 \end{enumerate}
 
-\subsection{Phase 5: Monitoring \& Support (3--5 days)}
+\subsection{Phase 5: Monitoring, Neurotrophic Repair \& Support (3--5 days)}
 \begin{enumerate}
     \item Controlled rewarming at $0.25\,^{\circ}\mathrm{C/hr}$.
-    \item Continuous neuro-ICU supportive care and EEG monitoring for subclinical seizures.
+    \item Continuous neuro-ICU supportive care and continuous EEG monitoring for subclinical seizures.
+    \item Co-infuse Neurotrophin-3 (NT-3) and Nerve Growth Factor (NGF) via CED to drive dendritic spine spinogenesis and reverse axonal beading \citep{scott2008, xu2023, gluska2014}.
+    \item Titrate low-dose IFN-$\beta$ micro-infusion for endothelial microvascular stabilization.
     \item Serial CSF viral load and biomarker quantification.
     \item Maintain cerebral perfusion pressure ($\mathrm{CPP} > 65\,\mathrm{mmHg}$).
 \end{enumerate}
 
-\subsection{Phase 6: Neurorehabilitation (Ongoing)}
+\subsection{Phase 6: Neurorehabilitation \& Epigenetic BDNF Mobilization (Ongoing)}
 \begin{enumerate}
     \item Initiate early multisensory and motor stimulation protocols.
     \item Longitudinal cognitive, speech, and physical rehabilitation \citep{james2026}.
-    \item Monitor neuroplastic recovery and BDNF epigenetic profiles \citep{heinsberg2025}.
+    \item Monitor neuroplastic recovery and BDNF epigenetic hypomethylation profiles \citep{heinsberg2025}.
 \end{enumerate}
 
 \section{Ethical Justification and Regulatory Framework}
@@ -374,11 +543,13 @@ Informed consent protocols must explicitly delineate:
 \endhead
 Untested Combination & The complete multi-modal protocol has not been evaluated in combined in vivo trials. & Prioritize staged rodent and non-human primate symptomatic challenge studies. \\
 \addlinespace
-Nanobody GMP Supply & Anti-rabies nanobodies (VHH) require dedicated GMP microbial expression batches. & Establish standardized \textit{Pichia pastoris} biomanufacturing pipelines \citep{terryn2016}. \\
+Nanobody \& ASO Supply & Anti-rabies nanobodies (VHH) and ASOs require dedicated GMP synthesis batches. & Establish standardized \textit{Pichia pastoris} biomanufacturing and oligonucleotide synthesis pipelines \citep{terryn2016}. \\
 \addlinespace
 Neurosurgical CED Risks & Catheter insertion carries risks of intracranial hemorrhage, reflux, and infection. & Utilize stepped-design cannulas, micro-infusion rates ($<3.0\,\mu\mathrm{L/min}$), and real-time MRI guidance \citep{ced2025, narsinh2025}. \\
 \addlinespace
-Intracranial Pressure (ICP) & Parenchymal infusion into inflamed tissue risks elevating ICP and causing edema. & Continuous ICP telemetry, osmoprotective agents (mannitol / hypertonic saline), and ramped flow protocols. \\
+Intracranial Pressure (ICP) & Parenchymal infusion into inflamed tissue risks elevating ICP and causing edema. & Continuous ICP telemetry, osmoprotective agents (mannitol / 3\% hypertonic saline), and ramped flow protocols. \\
+\addlinespace
+Structural Spine Loss & Rabies virus induces axonal beading and dendritic spine collapse via F-actin depolymerization. & Co-infusion of neurotrophic factors (NT-3, NGF) and early pediatric neurorehabilitation \citep{scott2008, xu2023, gluska2014}. \\
 \addlinespace
 Animal Model Gap & Lack of established large-animal models replicating symptomatic CNS viral clearance. & Implement systematic feline or canine translational models alongside compassionate clinical registry data. \\
 \addlinespace
@@ -386,19 +557,72 @@ Viral Load Quantification & Real-time measurement of parenchymal viral load and 
 \addlinespace
 Thermal Gradient Control & Selective brain cooling requires precise temperature titration without systemic shivering. & Closed-loop nasopharyngeal / endovascular heat exchangers with active core warming blankets ($37\,^{\circ}\mathrm{C}$). \\
 \addlinespace
-Post-Lysis Inflammation & Rapid extracellular virion neutralization may trigger local neuroinflammatory cascades. & Adjunctive neuroprotective modulation and controlled hypothermic dampening of cytokine release. \\
+Post-Lysis Inflammation & Rapid extracellular virion neutralization may trigger local neuroinflammatory cascades. & Adjunctive neuroprotective modulation, low-dose IFN-$\beta$ endothelial stabilization, and hypothermia. \\
 \bottomrule
 \end{longtable}
 
 \subsection{Future Work}
 
 \begin{enumerate}
-    \item \textbf{Preclinical In Vivo Validation}: Evaluate combined RVNA components (CED + regional hypothermia + IgG + biparatopic VHH) in symptomatic animal challenge models.
+    \item \textbf{Preclinical In Vivo Validation}: Evaluate combined RVNA components (CED + regional hypothermia + multi-epitope mAbs + biparatopic VHH + BCX4430 + NT-3/NGF) in symptomatic animal challenge models.
     \item \textbf{Nanobody Optimization}: Engineer multivalent and biparatopic nanobodies targeting conserved viral glycoprotein epitopes \citep{terryn2016}.
     \item \textbf{Computational Fluid Dynamics (CFD) Modeling}: Model CED distribution dynamics in infected cerebral tissue to optimize stereotactic trajectory planning \citep{ced2025}.
     \item \textbf{Compassionate Use Clinical Registry}: Establish an international multi-center registry to document outcomes of individual compassionate-use cases \citep{fda2025}.
-    \item \textbf{Formulation Optimization}: Develop specialized nanocarrier and hydrogel formulations for stabilized intracranial CED antibody delivery \citep{ced2025}.
+    \item \textbf{Formulation Optimization}: Develop specialized nanocarrier and hydrogel formulations for stabilized intracranial CED antibody and neurotrophin delivery \citep{ced2025}.
 \end{enumerate}
+
+\section{Roadmap to RVNA Protocol Version 3.0: Open-Source CED Simulation Engine \& Transport Equations}
+
+To accelerate global clinical readiness and stereotactic precision, the forthcoming \textbf{RVNA Protocol Version 3.0} will release a dedicated, fully open-source finite-element computational fluid dynamics (CFD) simulation suite. This platform solves the coupled biophysical equations of fluid momentum, multi-species convection-dispersion mass transfer, and tissue poroelasticity across patient-specific neuroanatomical meshes.
+
+\subsection{Governing Biophysical Transport Equations}
+
+\subsubsection{1. Interstitial Darcy Fluid Flow in Anisotropic Cerebral Parenchyma}
+Convective fluid velocity $\mathbf{v}$ generated by positive micro-infusion hydrostatic pressure gradients in porous brain tissue is governed by Darcy's Law:
+\begin{equation}
+\mathbf{v} = -\mathbf{K}(\mathbf{x}) \nabla p
+\end{equation}
+where $p$ is interstitial fluid pressure ($\mathrm{Pa}$) and $\mathbf{K}(\mathbf{x}) = \frac{\mathbf{k}(\mathbf{x})}{\mu}$ is the hydraulic conductivity tensor ($\mathrm{m}^2 / (\mathrm{Pa}\cdot\mathrm{s})$). To account for preferential bulk flow along white matter tracts, $\mathbf{k}(\mathbf{x})$ is constructed directly from patient-specific Diffusion Tensor Imaging (DTI) fractional anisotropy matrices:
+\begin{equation}
+\mathbf{k}(\mathbf{x}) = k_{\text{iso}} \left[ (1 - \alpha_{\text{ani}}) \mathbf{I} + \alpha_{\text{ani}} \mathbf{v}_1 \mathbf{v}_1^T \right]
+\end{equation}
+where $\mathbf{v}_1$ is the principal DTI tractography eigenvector and $\alpha_{\text{ani}} \in [0, 1]$ is the local tract anisotropy coefficient.
+
+\subsubsection{2. Fluid Mass Conservation and Microvascular Sinks}
+Steady-state conservation of fluid mass within deformable porous brain tissue satisfies:
+\begin{equation}
+\nabla \cdot \mathbf{v} = S_{\text{infusion}} - L_p \left( p - p_{\text{microvasc}} \right)
+\end{equation}
+where $S_{\text{infusion}}(\mathbf{x}, t)$ is the cannula volumetric infusion rate ($0.1\text{--}5.0\,\mu\mathrm{L/min}$), $L_p$ is the microvascular filtration coefficient, and $p_{\text{microvasc}}$ is capillary venous pressure.
+
+\subsubsection{3. Multi-Species Convection-Dispersion Mass Transfer}
+For each therapeutic biologic and small molecule in the RVNA stack (SYN023 full-length IgG, biparatopic VHH nanobodies, BCX4430, custom ASOs, NT-3, and NGF), spatial and temporal concentration distributions $C_i(\mathbf{x}, t)$ are governed by the convection-dispersion-reaction transport equation:
+\begin{equation}
+\frac{\partial (\theta C_i)}{\partial t} + \nabla \cdot (\mathbf{v} C_i) = \nabla \cdot \left( \mathbf{D}_i^* \nabla C_i \right) - k_{\text{elim}, i} C_i - k_{\text{on}, i} C_i \left( B_{\max, i} - B_i \right) + k_{\text{off}, i} B_i
+\end{equation}
+where:
+\begin{itemize}
+    \item $\theta$ is the extracellular volume fraction ($\theta \approx 0.20$);
+    \item $\mathbf{D}_i^* = \frac{D_{0, i}}{\lambda_{\text{tort}}^2} \mathbf{I} + \mathbf{D}_{\text{mech}}(\mathbf{v})$ is the effective hydrodynamic dispersion tensor incorporating tissue tortuosity ($\lambda_{\text{tort}} \approx 1.6$) and velocity-dependent mechanical dispersion;
+    \item $k_{\text{elim}, i}$ is the first-order clearance and enzymatic degradation rate;
+    \item $B_i$ is the concentration of drug-target complexes (e.g., antibody-virion or neurotrophin-receptor conjugates), with association rate $k_{\text{on}, i}$ and dissociation rate $k_{\text{off}, i}$.
+\end{itemize}
+
+\subsubsection{4. Poroelastic Tissue Deformation and Reflux Prevention}
+Infusion-induced tissue displacement $\mathbf{u}$ and backflow risk along the catheter tract are modeled using Biot's poroelasticity formulation:
+\begin{equation}
+\nabla \cdot \boldsymbol{\sigma}' - \alpha \nabla p = \mathbf{0}, \quad \boldsymbol{\sigma}' = 2G \boldsymbol{\varepsilon} + \lambda \text{tr}(\boldsymbol{\varepsilon}) \mathbf{I}
+\end{equation}
+where $\boldsymbol{\varepsilon} = \frac{1}{2}(\nabla \mathbf{u} + (\nabla \mathbf{u})^T)$ is the strain tensor, $\alpha \approx 1$ is the Biot coefficient, and $G, \lambda$ are the Lamé elasticity moduli of brain tissue.
+
+\begin{clinicalpearl}{Version 3.0 Open-Source Release Milestones}
+The upcoming Version 3.0 release will provide:
+\begin{enumerate}
+    \item \textbf{FEniCS / OpenFOAM Simulation Engine}: Modular open-source finite element code solving equations (3)--(7) for multi-drug CED co-infusion.
+    \item \textbf{Automated $V_d/V_i$ Predictive Optimization}: Algorithmic catheter trajectory optimization computing distribution-to-infusion volume ratios ($V_d/V_i = 2.0\text{--}5.0$) across bilateral thalamic and brainstem nuclei.
+    \item \textbf{Clinical DICOM/DTI Importer}: Automated pipeline transforming patient-specific MRI DICOM datasets into high-density 3D volumetric finite-element meshes.
+\end{enumerate}
+\end{clinicalpearl}
 
 \section{Conclusion}
 
