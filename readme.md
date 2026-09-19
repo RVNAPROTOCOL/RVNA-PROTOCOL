@@ -159,11 +159,11 @@ $$\nabla \cdot \boldsymbol{\sigma}' - \alpha \nabla p = \mathbf{0}, \quad \bolds
 .
 ├── LICENSE                                # GNU General Public License v3 (GPLv3)
 ├── README.md                              # Comprehensive repository documentation with hyperlinked evidence
-├── RVNA_Drug_and_Cytokine_Compendium.txt  # High-density pharmacological, small-molecule & cytokine directory
+├── The RVNA Protocol Version 2.1 - Molecular Compendium.docx # High-density pharmacological, small-molecule & cytokine directory
 ├── rvna_protocol.tex                      # Full academic manuscript in LaTeX format (Version 2.1)
 ├── citations.bib                          # Curated BibTeX bibliography for the manuscript
-├── RVNA(6).pdf                            # Pre-compiled pdf file for version 2.0
-└── The_RVNA_Protocol_A...pdf              # Pre-compiled pdf file                      
+├── RVNA_version_v2.0.pdf                  # Pre-compiled PDF file for version 2.0
+└── The-RVNA Protocol-Systems -Architecture-for -Post-Exposure -CNS-Rabies -Clearance-version-2.1.pdf # Pre-compiled PDF file for version:2.1                    
 ```
 
 ---
