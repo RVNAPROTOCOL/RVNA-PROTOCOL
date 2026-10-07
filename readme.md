@@ -11,10 +11,16 @@
 
 ---
 
+## 📑 Executive Summary
+
+The **Rabies Virtual Neutralising Active (RVNA)** Protocol is an open-access translational biomedical systems architecture proposing a research framework for studying active viral clearance from the central nervous system (CNS) and potential structural recovery following symptomatic rabies virus (RABV) infection. It is a hypothesis-generating proposal, not a validated treatment protocol.
+
+Rabies encephalomyelitis is among the most lethal human infectious diseases, and clinical rabies has an extremely high fatality rate. PEP is designed to prevent infection after exposure; it is not an established treatment for symptomatic CNS rabies. The Milwaukee Protocol (an approach that has included induced coma and other intensive therapies) remains controversial. Jackson’s 2025 viewpoint argues that it should be abandoned after numerous reported failures, while a 2025 response by Willoughby disputes that interpretation. The evidence therefore supports describing the approach as unproven and debated, rather than universally ineffective (Jackson, 2025; Willoughby, 2025).
+
+---
+
 ## Contact
 
 For questions, collaboration inquiries, or research correspondence, contact: [contact.rvna@neurophylax.org](mailto:contact.rvna@neurophylax.org)
 
 ---
-
-## 📑 Executive Summary
